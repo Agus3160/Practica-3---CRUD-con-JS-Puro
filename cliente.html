@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="./css/clientes_style.css">
+</head>
+<body>
+    <div>
+        <h2>Agregar Cliente</h2>
+        <label for="name">Nombre:</label>
+        <input name="name" id="name" type="text" placeholder="Ingrese el nombre del cliente"/>
+
+        <label for="ruc">Ruc:</label>
+        <input name="ruc" id="ruc" type="text" placeholder="Ingrese el RUC del cliente"/>
+
+        <label for="addr">Direccion:</label>
+        <input name="addr" id="addr" type="text" placeholder="Ingrese la direccion del cliente"/>
+
+        <label for="phone">Telefono:</label>
+        <input name="phone" id="phone" type="text" placeholder="Ingrese el telefono del cliente"/>
+
+        <button type="button" onclick="fnCreateUser()">Agregar Cliente</button>
+    </div>
+    
+    <div id="updateClient">
+        <div class="updateClientBg">
+            <h3>Configurar Cliente</h3>
+            <label for="name">Nombre:</label>
+            <input name="name" id="configName" type="text" placeholder="Ingrese el nombre del cliente"/>
+
+            <label for="ruc">Ruc:</label>
+            <input name="ruc" id="configRuc" type="text" placeholder="Ingrese el RUC del cliente"/>
+
+            <label for="addr">Direccion:</label>
+            <input name="addr" id="configAddr" type="text" placeholder="Ingrese la direccion del cliente"/>
+
+            <label for="phone">Telefono:</label>
+            <input name="phone" id="configPhone" type="text" placeholder="Ingrese el telefono del cliente"/>
+
+            <div class="updateClientButtonsOptions">
+                <button type="button" id="editClientButton">Editar Cliente</button>
+                <button type="button" onclick="fnCloseConfigClientWindow()">Salir</button>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h2>Lista de Clientes</h2>
+        <table id="clientsTable">
+            <thead>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Ruc</th>
+                <th>Direccion</th>
+                <th>Telefono</th>
+                <th>
+                </th>
+            </thead>
+            <tbody id="cliientsTBody">
+
+            </tbody>
+        </table>
+    </div>
+
+    <a href="./dashboard.html">Back</a>
+
+    <script src="./js/models/clients.js"></script>
+    <script src="./js/app/clientes.js"></script>
+</body>
+</html>

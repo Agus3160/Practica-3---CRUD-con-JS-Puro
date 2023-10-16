@@ -1,0 +1,32 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#updateClient{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.329);
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.updateClientBg{
+    width: 60%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: aliceblue;
+    padding: 25px;
+}
+
+.updateClientButtonsOptions{
+    display: flex;
+    justify-content: space-between;
+}

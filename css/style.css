@@ -1,0 +1,19 @@
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+.dashboardMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50%;
+}
+
+.dashboardMenu a{
+    padding: 25px;
+    background-color: thistle;
+    color: black;
+}

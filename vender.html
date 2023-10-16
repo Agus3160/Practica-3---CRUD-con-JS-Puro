@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vender</title>
+</head>
+<body>
+    <div>
+        <h1>Menu de Venta</h1>
+        <div>
+            
+            <form>
+                <h2>Datos de factura:</h2>
+                <div>
+                    <label for="cliente">Cliente (ID):</label>
+                    <input type="number" min="1" id="cliente" name="clients" placeholder="ID del cliente comprador"/>
+                </div>
+                <div>
+                    <label for="vendedor">Vendedor (Me):</label>
+                    <input type="text" name="vendedor" id="vendedor" disabled="true"/>
+                </div>
+                <fieldset>
+                    <legend>Tipo de pago</legend>
+                    <div>
+                      <input type="radio" id="contado" name="tipoPago" value="contado" checked />
+                      <label for="contado">Contado</label>
+                    </div>
+                  
+                    <div>
+                      <input type="radio" id="credito" name="tipoPago" value="credito" />
+                      <label for="credito">Credito</label>
+                    </div>
+                </fieldset>
+                <div>
+                    <h2>Carrito de Items</h2>
+                    <div>
+                        <label for="item">Item:</label>
+                        <input name="item" id="item" type="text" placeholder="Nombre del producto" />
+                    </div>
+                    <div>
+                        <label for="quantity">Cantidad:</label>
+                        <input name="quantity" id="quantity" type="text" placeholder="Cantidad del producto" />
+                    </div>
+                    <div>
+                        <label for="precio">Precio:</label>
+                        <input name="precio" id="precio" type="number" min="0" placeholder="Precio del producto" />
+                    </div>
+                    <button type="button" onclick="fnAddItem()">Agregar</button>
+                    <table id="carritoTabla">
+                        <thead>
+                            <th>#</th>
+                            <th>Product</th>
+                          <th>Quantity</th>
+                          <th>Unit price</th>
+                          <th>Total price</th>
+                        </thead>
+                        <tbody id="tableBodyShopCart">
+
+                        </tbody>
+                    </table>
+                    <span id="totalShopCart">Total: 0$</span>
+                </div>
+                <button type="button">Realizar Venta</button>
+            </form>
+        </div>
+        <a href="/dashboard.html">Back</a>
+    </div>
+    <script src="./js/models/clients.js"></script>
+    <script src="./js/models/sellers.js"></script>
+    <script src="./js/models/factura.js"></script>
+    <script src="./js/models/facturaItem.js"></script>
+    <script src="./js/app/vender.js"></script>
+</body>
+</html>

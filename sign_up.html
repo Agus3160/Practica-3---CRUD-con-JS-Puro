@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+    <form>
+        <div>
+            <h2>Info de Usuario</h2>
+            <div>
+                <label for="username">Username: </label>
+                <input type="text" name="username" id="username"/>
+            </div>                
+            <div>
+                <label for="pswd">Password: </label>
+                <input type="password" name="pswd" id="pswd"/>
+            </div>
+        </div>
+
+        <div>
+            <h2>Info de Vendedor</h2>
+            <div>
+                <label for="name">Nombre: </label>
+                <input type="text" name="name" id="name"/>
+            </div>
+            <div>
+                <label for="ruc">RUC: </label>
+                <input type="text" name="ruc" id="ruc"/>
+            </div>
+            <div>
+                <label for="addr">Direccion: </label>
+                <input type="text" name="addr" id="addr"/>
+            </div>
+            <div>
+                <label for="phone">Telefono: </label>
+                <input type="text" name="phone" id="phone"/>
+            </div>
+            <div>
+                <label for="comision">Comision (%): </label>
+                <input type="number" name="comision" id="comision"/>
+            </div>
+            <button type="button" id="sign_up" onclick="fnSignUp()">Sign Up</button>
+            <a href="index.html">Login</a>
+        </div>
+    </form>
+    <script src="./js/models/user.js"></script>
+    <script src="./js/models/sellers.js"></script>
+    <script src="./js/auth.js"></script>
+</body>
+</html>
