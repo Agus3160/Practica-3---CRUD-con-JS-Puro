@@ -1,9 +1,9 @@
-let genId = JSON.parse(localStorage.getItem('sellers'))?.length || 0;
+let genSellerId = JSON.parse(localStorage.getItem('sellers'))?.length || 0;
 
 class Seller {
     //Constructor
     constructor(name, ruc, addr, phone, comision) {
-        this.id = ++genUserId;
+        this.id = ++genSellerId;
         this.name = name;
         this.ruc = ruc;
         this.addr = addr;

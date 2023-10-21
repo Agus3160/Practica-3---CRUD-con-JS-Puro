@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe</title>
+    <link rel="stylesheet" href="./css/informe_style.css">
+</head>
+<body>
+    <div>
+        <h1>Informes de ventas</h1>
+        <div>
+            <div>
+                <label for="vendedor">Vendedor:</label>
+                <input name="vendedor" id="vendedor" type="number" placeholder="Enter a seller ID to see their sells"/>
+                <span id="vendedorGanancias">Ganancias: 0$</span>
+            </div>
+            <div>
+                <label for="fromDate">From:</label>
+                <input name="fromDate" id="fromDate" type="date" placeholder="mm/dd/yyyy"/>
+            </div>
+            <div>
+                <label for="toDate">To:</label>
+                <input name="toDate" id="toDate" type="date"  placeholder="mm/dd/yyyy"/>
+            </div>
+            <button onclick="refreshFacturas()" type="button">Search</button>
+            <button onclick="fnClearParams()" type="button">Clear Filter</button>
+            <a href="./dashboard.html">Back</a>
+        </div>
+
+        <div id="facturasContainer">
+            
+        </div>
+        <script src="./js/models/factura.js"></script>
+        <script src="./js/models/clients.js"></script>
+        <script src="./js/models/sellers.js"></script>
+        <script src="./js/app/informe.js"></script>
+    </div>
+</body>
+</html>

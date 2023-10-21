@@ -4,7 +4,7 @@ body{
     box-sizing: border-box;
 }
 
-#updateClient{
+#updateVendedor{
     display: none;
     justify-content: center;
     align-items: center;
@@ -16,7 +16,7 @@ body{
     right: 0;
 }
 
-.updateClientBg{
+.updateVendedorBg{
     width: 80%;
     height: 50%;
     display: flex;
@@ -26,11 +26,11 @@ body{
     padding: 25px;
 }
 
-.updateClientBg button{
+.updateVendedorBg button{
     margin-top: 16px;
 }
 
-.updateClientButtonsOptions{
+.updateVendedorButtonsOptions{
     display: flex;
     justify-content: space-between;
 }
@@ -39,7 +39,7 @@ body{
     width: 90%;
 }
 
-.inputCliente{
+.inputVendedor{
     width: 80%;
     margin: auto;
 }

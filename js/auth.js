@@ -2,18 +2,6 @@ function fnGetUserInput(){
     return {
         username: document.getElementById('username')?.value,
         password: document.getElementById('pswd')?.value,
-        name: document.getElementById('name')?.value,
-        ruc: document.getElementById('ruc')?.value,
-        addr: document.getElementById('addr')?.value,
-        phone: document.getElementById('phone')?.value,
-        comision : document.getElementById('comision')?.value
-    }
-}
-
-function fnGetUserInputLogin(){
-    return {
-        username: document.getElementById('username')?.value,
-        password: document.getElementById('pswd')?.value,
     }
 }
 
@@ -33,16 +21,16 @@ function fnSignUp(){
         return 
     } 
 
-    let newSeller = new Seller(userData.name, userData.ruc, userData.addr, userData.phone, userData.comision)
-    let newUser = new User(userData.username, userData.password, newSeller.id)
-
-    Seller.create(newSeller)
+    let newUser = new User(userData.username, userData.password)
     User.create(newUser)
+
+    alert('Usuario creado Correctamente.')
+    window.location.href = '/index.html'
     
 }
 
 function fnLogin(){
-    let userData = fnGetUserInputLogin()
+    let userData = fnGetUserInput()
 
     for (const [key, value] of Object.entries(userData)){
         if(value.length <= 0) {

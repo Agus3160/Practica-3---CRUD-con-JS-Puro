@@ -29,7 +29,7 @@ class Client {
     static createClient(client){
         console.log(Client._actualList)
         Client._actualList.push(client)
-        Client._updateList()
+        Client._updateClientsList()
     }
 
     //UPDATE CLIENT

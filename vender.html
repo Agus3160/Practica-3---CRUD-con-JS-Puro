@@ -14,11 +14,11 @@
                 <h2>Datos de factura:</h2>
                 <div>
                     <label for="cliente">Cliente (ID):</label>
-                    <input type="number" min="1" id="cliente" name="clients" placeholder="ID del cliente comprador"/>
+                    <input type="number" id="cliente" name="clients" placeholder="ID del cliente comprador"/>
                 </div>
                 <div>
-                    <label for="vendedor">Vendedor (Me):</label>
-                    <input type="text" name="vendedor" id="vendedor" disabled="true"/>
+                    <label for="vendedor">Vendedor (ID):</label>
+                    <input type="number" name="vendedor" id="vendedor" placeholder="ID del Vendedor"/>
                 </div>
                 <fieldset>
                     <legend>Tipo de pago</legend>
@@ -51,9 +51,9 @@
                         <thead>
                             <th>#</th>
                             <th>Product</th>
-                          <th>Quantity</th>
-                          <th>Unit price</th>
-                          <th>Total price</th>
+                            <th>Quantity</th>
+                            <th>Unit price</th>
+                            <th>Total price</th>
                         </thead>
                         <tbody id="tableBodyShopCart">
 
@@ -61,7 +61,7 @@
                     </table>
                     <span id="totalShopCart">Total: 0$</span>
                 </div>
-                <button type="button">Realizar Venta</button>
+                <button type="button" onclick="fnDoASell()">Realizar Venta</button>
             </form>
         </div>
         <a href="/dashboard.html">Back</a>

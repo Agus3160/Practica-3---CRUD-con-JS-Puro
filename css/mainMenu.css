@@ -1,0 +1,11 @@
+.dashBoard{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-evenly;
+}
+
+a{
+    width: 100%;;
+}

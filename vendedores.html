@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendedores</title>
+    <link rel="stylesheet" href="./css/vendedores_style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="inputCliente">
+                <h2>Agregar Vendedor</h2>
+                <label for="name">Nombre: </label>
+                <input type="text" name="name" id="name"/>
+                </div>
+                <div class="fieldDiv">
+                    <label for="ruc">RUC: </label>
+                    <input type="text" name="ruc" id="ruc"/>
+                </div>
+                <div class="fieldDiv">
+                    <label for="addr">Direccion: </label>
+                    <input type="text" name="addr" id="addr"/>
+                </div>
+                <div class="fieldDiv">
+                    <label for="phone">Telefono: </label>
+                    <input type="text" name="phone" id="phone"/>
+                </div>
+                <div class="fieldDiv">
+                    <label for="comision">Comision (%): </label>
+                    <input type="number" name="comision" id="comision"/>
+                </div>
+                
+                <div class="inputOptions">
+                    <button type="button" class="authButton" onclick="fnCreateVendedor()">Agregar Vendedor</button>
+                    <a href="./dashboard.html">Back</a>
+                </div>
+            </div>
+            
+            <div id="updateVendedor">
+                <div class="updateVendedorBg">
+                    <h3>Configurar </h3>
+                    <label for="name">Nombre:</label>
+                    <input name="name" id="configName" type="text" placeholder="Ingrese el nombre del vendedor"/>
+        
+                    <label for="ruc">Ruc:</label>
+                    <input name="ruc" id="configRuc" type="text" placeholder="Ingrese el RUC del vendedor"/>
+        
+                    <label for="addr">Direccion:</label>
+                    <input name="addr" id="configAddr" type="text" placeholder="Ingrese la direccion del vendedor"/>
+        
+                    <label for="phone">Telefono:</label>
+                    <input name="phone" id="configPhone" type="text" placeholder="Ingrese el telefono del vendedor"/>
+
+                    <label for="phone">Comision:</label>
+                    <input name="phone" id="configComision" type="text" placeholder="Ingrese la comision del vendedor"/>
+        
+                    <div>
+                        <button class="authButton" type="button" id="editVendedorButton">Editar Vendedor</button>
+                        <button class="authButton" type="button" onclick="fnCloseConfigVendedorWindow()">Salir</button>
+                    </div>
+                </div>
+            </div>
+        
+            <div>
+                <h2>Lista de Vendedores</h2>
+                <table>
+                    <thead>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Ruc</th>
+                        <th>Direccion</th>
+                        <th>Telefono</th>
+                        <th>Comision(%)</th>
+                        <th>
+                        </th>
+                    </thead>
+                    <tbody id="vendedoresTBody">
+        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="./js/models/sellers.js"></script>
+    <script src="./js/app/vendedores.js"></script>
+</body>
+</html>

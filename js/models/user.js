@@ -2,11 +2,10 @@ let genUserId = JSON.parse(localStorage.getItem('users'))?.length || 0;
 
 class User {
     //Constructor
-    constructor(username, password, sellerId) {
-        this.id = ++genUserId;
+    constructor(username, password) {
+        this.id = genUserId++;
         this.username = username;
         this.password = password;
-        this.sellerId = sellerId;
     }
 
     static _actualList = User.getList() //Store the actual list from localstorage in memory
@@ -39,7 +38,6 @@ class User {
             if(u.id === id){
                 u.username = updatedUser.username;
                 u.password = updatedUser.password;
-                u.sellerId = updatedUser.sellerId;
                 return
             }
         });

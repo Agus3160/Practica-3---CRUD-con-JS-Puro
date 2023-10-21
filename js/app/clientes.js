@@ -48,22 +48,26 @@ function fnRefreshClientList(){
 
 function fnCreateUser(){
     let clientData = {
-        name : document.getElementById('name').value,
-        ruc : document.getElementById('ruc').value,
-        addr : document.getElementById('addr').value,
-        phone : document.getElementById('phone').value
+        name : document.getElementById('name'),
+        ruc : document.getElementById('ruc'),
+        addr : document.getElementById('addr'),
+        phone : document.getElementById('phone')
     }
     
     for(v of Object.values(clientData)){
-        if(v.trim().length <= 0){
+        if(v.value.trim().length <= 0){
             alert('No se han rellenado los campos.')
             return
         }
     }
 
-    let newClient = new Client(clientData.name, clientData.ruc, clientData.addr, clientData.phone)
+    let newClient = new Client(clientData.name.value, clientData.ruc.value, clientData.addr.value, clientData.phone.value)
 
     Client.createClient(newClient)
+
+    for(v of Object.values(clientData)){
+        v.value = ""
+    }
 
     fnRefreshClientList()
 }

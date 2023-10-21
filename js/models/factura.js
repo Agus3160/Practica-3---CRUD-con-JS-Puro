@@ -2,18 +2,39 @@ let genFacturaId = JSON.parse(localStorage.getItem('facturas'))?.length || 0;
 
 class Factura {
     //Constructor
-    constructor(clientId, isContado, items, total) {
+    constructor(clientId, sellerId, isContado, items, total) {
         this.id = ++genFacturaId;
-        this.fecha = Date.now();
+        this.fecha = this._getDatePropperFormat();
         this.clientId = clientId;
+        this.sellerId = sellerId;
         this.isContado = isContado;
         this.items = items;
         this.total = total;
+        this.sellerComision = this._getComision();
     }
 
     static _actualList = Factura.getList() //Store the actual list from localstorage in memory
 
     //AUX FUNCTIONS:
+    _getDatePropperFormat(){
+        const date = new Date(Date.now());
+
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = String(date.getMonth() + 1).padStart(2, '0'); 
+        const year = date.getFullYear();
+
+        // dd/mm/yyyy
+        return `${year}-${month}-${day}`;
+    }
+
+    _getComision(){
+        if(this.isContado){
+            let tempSeller = Seller.get(this.sellerId)
+            return Math.floor(parseFloat(tempSeller.comision) * this.total)
+        }
+        return 0
+    }
+
     static _updateList(){
         localStorage.setItem('facturas', JSON.stringify(Factura._actualList))
     }
@@ -41,9 +62,11 @@ class Factura {
             if(f.id === id){
                 f.fecha = updatedFactura.fecha;
                 f.clientId = updatedFactura.clientId;
+                f.sellerId = updatedFactura.sellerId;
                 f.isContado = updatedFactura.isContado;
                 f.items = updatedFactura.items;
                 f.total = updatedFactura.total
+                f.sellerComision = updatedFactura.sellerComision;
                 return
             }
         });
