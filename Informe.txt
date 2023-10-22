@@ -1,0 +1,3 @@
+Se creó una aplicacion que utiliza CRUD para manipular datos que son almacenados en el localStorage.
+Se lograron los objetivos principales de la tarea y además se consiguieron puntos extra, como lo son la lista de clientes, el inicio de sesion, etc.
+La parte mas complicada desde mi punto de vista fue el de relacionar las tablas entre si para no obtener valores indefinidos.
